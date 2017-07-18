@@ -5,11 +5,20 @@
  */
 package com.goblinfire.arcaniaflux.state;
 
+import com.goblinfire.arcaniaflux.ui.Widget;
+import java.util.ArrayList;
+
 /**
  *
  * @author john
  */
 public abstract class Gamestate {
 
+    protected ArrayList<Widget> widgets;
+
     public abstract void render();
+
+    public ArrayList<Widget> getWidgets() {
+        return this.widgets;
+    }
 }
