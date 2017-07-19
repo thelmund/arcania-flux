@@ -5,6 +5,7 @@
  */
 package com.goblinfire.arcaniaflux.state;
 
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.goblinfire.arcaniaflux.ui.Widget;
 import java.util.ArrayList;
 
@@ -14,6 +15,7 @@ import java.util.ArrayList;
  */
 public abstract class Gamestate {
 
+    protected OrthographicCamera camera;
     protected ArrayList<Widget> widgets;
 
     public abstract void render();

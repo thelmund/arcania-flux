@@ -13,9 +13,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  * @author John
  */
 public class Button extends Widget {
-    
+
     public Button(int x, int y, boolean isVisible, Texture texture,
-                  WidgetAction action) {
+            WidgetAction action) {
         super(x, y, isVisible, texture, action);
     }
 

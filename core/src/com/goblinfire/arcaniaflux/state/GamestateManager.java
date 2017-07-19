@@ -5,19 +5,30 @@
  */
 package com.goblinfire.arcaniaflux.state;
 
+import java.util.Stack;
+
 /**
  *
  * @author john
  */
 public class GamestateManager {
 
-    private static Gamestate current_state;
+    private static final Stack<Gamestate> STATE_STACK = new Stack<Gamestate>();
+
+    public static void pushState(Gamestate new_state) {
+        GamestateManager.STATE_STACK.push(new_state);
+    }
+
+    public static Gamestate popState() {
+        return GamestateManager.STATE_STACK.pop();
+    }
 
     public static void switchState(Gamestate new_state) {
-        GamestateManager.current_state = new_state;
+        GamestateManager.STATE_STACK.clear();
+        GamestateManager.STATE_STACK.push(new_state);
     }
 
     public static Gamestate getCurrentState() {
-        return GamestateManager.current_state;
+        return GamestateManager.STATE_STACK.peek();
     }
 }

@@ -21,7 +21,6 @@ public abstract class Widget {
     protected WidgetAction action;
     protected boolean isFocused;
     protected boolean isSelected;
-    
 
     public Widget(int x, int y, boolean isVisible, Texture texture,
             WidgetAction action) {
@@ -69,13 +68,17 @@ public abstract class Widget {
     public WidgetAction getAction() {
         return this.action;
     }
-    
+
     public boolean isFocused() {
         return this.isFocused;
     }
-    
+
     public boolean isSelected() {
         return this.isSelected;
+    }
+
+    public void setFocused(boolean isFocused) {
+        this.isFocused = isFocused;
     }
 
     public void setSelected(boolean isSelected) {
